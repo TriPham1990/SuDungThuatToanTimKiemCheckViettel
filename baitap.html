@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regexpViettel = /^[0][9][6-8][0-9]{7}$|^[0][8][6][0-9]{7}$|^[0][3][2-9][0-9]{7}$/;
+    let arrayNumberPhone = ['0987104053', '0123456789', '0985485854', '0456189723', '0356777444'];
+
+    function is_checkNumberPhoneViettel(array) {
+        for (let i = 0; i <= array.length; i++) {
+            if (regexpViettel.test(array[i])) {
+                document.write(array[i] + " là số điện thoại Viettel." + "<br>");
+            }
+        }
+    }
+
+    is_checkNumberPhoneViettel(arrayNumberPhone);
+
+</script>
+</body>
+</html>
